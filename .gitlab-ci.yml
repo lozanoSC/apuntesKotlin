@@ -16,7 +16,7 @@ pages:
     paths:
     - public
   only:
-  - main
+  - master
 
 pdf:
   stage: deploy

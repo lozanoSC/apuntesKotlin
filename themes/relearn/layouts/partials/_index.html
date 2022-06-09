@@ -1,0 +1,18 @@
+{{- partial "header.html" . }}
+{{- if .Site.Home.Content }}
+  {{- if eq (.Scratch.Get "relearnOutputFormat") "PRINT" }}
+    {{- partial "body.print.html" .Site.Home }}
+  {{- else }}
+    {{- partial "body.html" .Site.Home }}
+  {{- end }}
+{{- else }}
+          <article>
+
+<h1>IES San Clemente</h1>
+
+
+            <footer class="footline">
+          	</footer>
+          </article>
+{{- end }}
+{{- partial "footer.html" . }}

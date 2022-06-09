@@ -1,0 +1,64 @@
+
+# this is a required setting for this theme to appear on https://themes.gohugo.io/
+# change this to a value appropriate for you
+baseURL = "/"
+# as the official Hugo documentation recommends, we turn this off for this
+# showcase; this allows the published site to be served by both http and https
+canonifyURLs = false
+# required for official documentation served from subfolder
+relativeurls = true
+
+# the directory where Hugo reads the themes from; this is specific to your
+# installation and most certainly needs be deleted or changed
+# yeah, well, obviously a mandatory setting for your site, if you want to
+# use this theme ;-)
+theme = "relearn"
+
+# the main language of this site; also an automatic pirrrate translation is
+# available in this showcase
+languageCode = "en"
+defaultContentLanguage = "en"
+
+# the site's title of this showcase; you should change this ;-)
+title = "Manuais IES San Clemente"
+
+# settings specific to this theme's features; choose to your likings and
+# consult this documentation for explaination
+[params]
+  showVisitedLinks = true
+  collapsibleMenu = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = false
+  titleSeparator = "::"
+  themeVariant = [ "blue", "relearn-light", "relearn-dark", "learn", "neon",  "green", "red" ]
+  disableSeoHiddenPages = true
+  disableShortcutsTitle = false
+  mermaidInitialize = "{ \"securityLevel\": \"loose\" }"
+
+[outputs]
+  # add JSON to the home to support lunr search; This is a mandatory setting
+  # for the search functionality
+  # add PRINT to home, section and page to activate feature to print whole
+  # chapters
+  home = ["HTML", "RSS", "PRINT", "JSON"]
+  section = ["HTML", "RSS", "PRINT"]
+  page = ["HTML", "RSS", "PRINT"]
+
+
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-pen'></i> Cómo colaborar"
+url = "instrucciones/comocolaborar"
+weight = 20
+
+[[menu.shortcuts]]
+  name =  "<i class='fas fa-fw fa-bookmark'></i>  Cómo editar plantilla"
+  url = "https://mcshelby.github.io/hugo-theme-relearn/shortcodes/attachments/"
+  weight = 30
+
+[[menu.shortcuts]]
+  name =  "<i class='fas fa-home'></i> IES San Clemente"
+  url = "https://www.iessanclemente.net/"
+  weight = 40
+

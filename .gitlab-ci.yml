@@ -1,0 +1,35 @@
+# All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
+image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+pages:
+  stage: deploy
+  script:
+  - sed -i "s#https://www.example.com#$CI_PAGES_URL#" config.toml
+  - sed -i "s#Titulo#$CI_PROJECT_TITLE#" config.toml
+  - cat config.toml
+  # Executase a paxina
+  - hugo
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
+
+pdf:
+  stage: deploy
+  image: manurlopez17/apuntes-to-pdf:latest
+  script:
+    - ls
+    - cd /pdf
+    - ls
+    - python3 mdToPDF.py ${CI_PROJECT_DIR}
+    - mkdir /public
+    - mv output/proba.pdf /${CI_PROJECT_DIR}/apuntamentos.pdf
+  artifacts:
+    paths:
+      - apuntamentos.pdf
+  when: manual
+

@@ -1,6 +1,9 @@
 ---
-title: Módulo
+title: Programacion en Kotlin
+chapter: true
+weight: 1
+
 ---
 
-# Módulo
-
+# Módulo de programacion 
+intro kotlin

@@ -1,6 +1,6 @@
 ---
 title: Programacion en Kotlin
-chapter: true
+
 weight: 1
 
 ---

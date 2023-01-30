@@ -60,8 +60,3 @@ weight = 20
   name =  "<i class='fas fa-home'></i> IES San Clemente"
   url = "https://www.iessanclemente.net/"
   weight = 40
-
-
-[module]
-[[module.imports]]
-  path = 'https://gitlab.iessanclemente.net/manuais/apuntes.git'

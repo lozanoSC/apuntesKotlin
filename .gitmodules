@@ -4,3 +4,6 @@
 [submodule "themes/relearn"]
 	path = themes/relearn
 	url = https://github.com/McShelby/hugo-theme-relearn.git
+[submodule "content/apuntes"]
+	path = content/apuntes
+	url = https://gitlab.iessanclemente.net/manuais/apuntes.git

@@ -61,3 +61,7 @@ weight = 20
   url = "https://www.iessanclemente.net/"
   weight = 40
 
+
+[module]
+[[module.imports]]
+  path = 'https://gitlab.iessanclemente.net/manuais/apuntes.git'

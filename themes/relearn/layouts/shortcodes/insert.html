@@ -1,5 +1,5 @@
 {{ $repo := .Get 0 }}
-{{ $json := getJSON "raw.githubusercontent.com/sabelassm/CD_UD02_Tarea1/main/markdown.md"   }}
+{{ $json := getJSON "https://api.github.com/repos/europace/" $repo "/readme" }}
 {{ $json.content | base64Decode | markdownify }}
 
 

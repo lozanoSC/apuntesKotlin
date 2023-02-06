@@ -1,5 +1,5 @@
 {{ $repo := .Get 0 }}
-{{ $json := getJSON "https://gitlab.iessanclemente.net/manuais/apuntes/-/raw/main/content/" $repo   (dict "Private-Token" "glpat-1-zkuxUVBXSC9ziSi6NS")  }}
+{{ $json := getJSON "api.github/repos/europace/" $repo "/readme"  (dict "Private-Token" "glpat-1-zkuxUVBXSC9ziSi6NS")  }}
 {{ $json.content | base64Decode | markdownify }}
 
 

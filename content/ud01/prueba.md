@@ -1,6 +1,7 @@
 ---
-title: "Sketch Libraries and primitives to build buttons"
-affiliatelink: "https://sabela.pages.iessanclemente.net/dwcs/"
+title: "Prueba Insert"
 weight: 1
 ---
 
+
+{{% insert  "redes/2.direccionamientoip/1.introduccion.md" %}}

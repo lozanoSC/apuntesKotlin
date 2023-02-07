@@ -4,4 +4,4 @@ weight: 1
 ---
 
 
-{{% insert   "redes/direccionamientoip/1.introduccion"  %}}
+{{% insert   "redes/2.direccionamientoip/1.introduccion"  %}}

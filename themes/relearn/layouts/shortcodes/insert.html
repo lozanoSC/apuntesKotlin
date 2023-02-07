@@ -1,5 +1,6 @@
 {{ $repo := .Get 0 }}
-{{ $json := getJSON "https://gitlab.iessanclemente.net/api/v4/projects/3017/repository/files/content%2F" $repo ".md" }}
+{{ $u := urlquery "https://gitlab.iessanclemente.net/api/v4/projects/3017/repository/files/content%2F" $repo ".md?ref=main"  | safeURL }}
+{{ $json := getJSON $u }}
 {{ $json.content | base64Decode | markdownify }}
 
 

@@ -1,6 +1,5 @@
 {{ $repo := .Get 0 }}
 {{ $u := urlquery  $repo  | safeURL }}
 {{ $json := getJSON "https://gitlab.iessanclemente.net/api/v4/projects/3017/repository/files/content%2F" $u  ".md?ref=main" (dict "PRIVATE-TOKEN" "glpat-1-zkuxUVBXSC9ziSi6NS") }}
-{{ $content := $json.content | base64Decode }}
-{{ $content.RenderString }}
+{{ $content := $json.content | base64Decode | $.Page.RenderString }}
 

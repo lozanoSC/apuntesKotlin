@@ -4,4 +4,4 @@ weight: 1
 ---
 
 
-{{% insert   "redes/2.direccionamientoip/4.direccionamientosinclase"  %}}
+{{< insert   "redes/1.fundamentos/1.introduccion" >}}

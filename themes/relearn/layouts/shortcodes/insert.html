@@ -9,4 +9,4 @@
 
 {{ $jsonDecode := $json.content | base64Decode }}
 
-{{ $jsonDecode | replaceRE `(?m)(?s:---.*.---$)` " " | replaceRE "!\\[.*.\\]\\("  $urlFoto   }}
+{{ $jsonDecode | replaceRE `(?m)(?s:---.*.---$)` " " | replaceRE "!\\[.*.\\]\\("  $urlFoto | markdownify  }}

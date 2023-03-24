@@ -1620,3 +1620,4 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 #sidebar .collapsible-menu input.toggle:checked + label + a + ul {
 	display: inline;
 }
+

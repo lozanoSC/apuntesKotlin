@@ -1,0 +1,13 @@
+{{ $lenguaje := .Get 0 }}
+{{ $numBloque := .Get 1 }}
+{{ $urlServer :=  print "localhost" }}
+{{ $port := print 4000 }}
+
+<a class="btn btn-default" id="refresh" style="background-color: white; color: blue; "  onclick="calljobe('res{{$numBloque}}', 'localhost', '4000', '{{ $lenguaje }}', '{{$numBloque}}')">
+    <i class="fa fa-play"></i> Run Code</a>
+    <div style="width: 900px; background-color: #f4f4f4 " class="highlightable" contentEditable="true">
+        <div name="code{{$numBloque}}" id="code{{$numBloque}}" >{{ transform.Highlight .Inner $lenguaje }}</div>
+        <b>Resultado:</b> 
+    <input type="text" name="res{{$numBloque}}" id="res{{$numBloque}}" readonly></input>
+</div>
+

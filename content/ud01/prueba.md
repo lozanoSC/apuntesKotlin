@@ -4,7 +4,7 @@ weight: 1
 ---
 
 ### Java 
-{{< coderunner java "hola" >}}
+{{< coderunner java >}}
 public class HolaMundo {
 	public static void main(String[] args) {		
 		System.out.println("Hola Mundo");
@@ -13,8 +13,21 @@ public class HolaMundo {
 {{< /coderunner  >}}
 
 ### Python  
-{{< coderunner python3 "1" >}}
+{{< coderunner python3  >}}
+
 print("¡Hola, Mundoooooooo!")
 
+{{< /coderunner  >}}
+
+### JavaScript   
+{{< coderunner nodejs  >}}
+console.log("preuba");
+{{< /coderunner  >}}
+
+### PHP   
+{{< coderunner php  >}}
+$a = '1';
+
+echo $a;
 {{< /coderunner  >}}
 

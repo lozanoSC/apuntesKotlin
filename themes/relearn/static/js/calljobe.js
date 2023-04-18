@@ -1,4 +1,25 @@
 //Devuelve el nombre del archivo de código que se enviará al servidor
+
+function addCodeRunnerBlockIds() {
+    const blocks = document.querySelectorAll('.coderunner-block');
+
+    for(let i = 0; i < blocks.length; i++) {
+        const block = blocks[i];
+        block.children[0].setAttribute('id',`code${i}`)
+
+        block.querySelector('textarea').setAttribute('id',`res${i}`)
+        block.querySelector('textarea').setAttribute('name',`res${i}`)
+
+        block.querySelector('a').setAttribute('id',i)
+    }
+}
+function callJOBE(element, urlServer, port, lenguaje) {
+    const id = element.getAttribute('id');
+    console.log(urlServer, port, lenguaje, id)
+    calljobe(urlServer, port, lenguaje, id)
+}
+addCodeRunnerBlockIds()
+
 function _getSourceFileName(text, ext) {
     var sourceName = "calljobe";
     
@@ -35,8 +56,9 @@ function getlans(lansid, server, port) {
 }  
 
 //Llama al API de JOBE con los ids de las cajas de texto de código, resultado, servidor y puerto
-function calljobe(resid, server, port, lan, numbloque) {
-    const extensions = {'java':'java', 'c':'c', 'python3':'py', 'cpp':'cpp', 'php':'php', 'nodejs':'js',
+function calljobe(server, port, lan, numbloque) {
+    const resid = 'res'+numbloque;
+    const extensions = {'java':'java', 'c':'c', 'python3':'py', 'cpp':'cpp', 'php':'php', 'js':'js',
                         'pascal':'pas', 'octave':'m'}
 
 
@@ -51,10 +73,21 @@ function calljobe(resid, server, port, lan, numbloque) {
     Http.send(JSON.stringify({"run_spec": {"language_id": lan, "sourcefilename": _getSourceFileName(runcodeText, ext) + "." + ext, "sourcecode": runcodeText}}));
     
     Http.onreadystatechange = (e) => {
-        jres = JSON.parse(Http.responseText);
+       // console.log(Http.responseText)
+        const responseString = Http.responseText.replaceAll('\n','\\n'); // Falla (pero no debería)
+        jres = JSON.parse(responseString);
         stdout = jres['stdout'];
         stderr = jres['stderr'];
         cmpinfo = jres['cmpinfo'];
-        document.getElementById(resid).value = stdout + "\n" + stderr + "\n" + cmpinfo;               
+
+        if(stderr) {
+            document.getElementById(resid).value = stderr;  
+            console.log(stderr)             
+        }
+        else {
+            document.getElementById(resid).value = stdout;               
+            //document.getElementById(resid).value = stdout + "\n" + stderr + "\n" + cmpinfo;               
+        }
+
     } 
-}  
+}

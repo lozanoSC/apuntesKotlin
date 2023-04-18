@@ -1,0 +1,33 @@
+article {
+    width: 100%;
+}
+.coderunner-block {
+    width: 100%;
+}
+.coderunner-block pre {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.coderunner-block > div {
+    position: relative;
+}
+.coderunner-block a {
+    width: 30px;
+    height: 28px;
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    z-index: 10000;
+    background-color: rgba( 160, 160, 160, 0.2 );
+    border: none !important;
+    border-radius: 3px !important;
+}
+.coderunner-block a i {
+    top: 6px;
+    left: 10px;
+    position: absolute;
+    color: #27ae60;
+}
+.coderunner-block textarea {
+    height: 40px;
+}

@@ -46,7 +46,7 @@ function getlans(lansid, server, port) {
                     location.reload();
     })
     const Http = new XMLHttpRequest();
-    const url='http://' + server + ':' + port + '/jobe/index.php/restapi/languages';
+    const url='https://' + server + ':' + port + '/jobe/index.php/restapi/languages';
     Http.open("GET", url, true);
     Http.send(null);
     

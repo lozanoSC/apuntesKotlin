@@ -1,5 +1,27 @@
 article {
     width: 100%;
+    min-height: 100%;
+}
+.article-footer {
+    padding-bottom: 20px;
+}
+.article-footer-autor {
+    display: flex;
+    justify-content: center;
+}
+.article-footer-autor > div {
+    padding: 0 10px;
+}
+.creative-commons-license {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+.creative-commons-license img {
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 4px !important;
 }
 .coderunner-block {
     width: 100%;

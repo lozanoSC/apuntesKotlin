@@ -1,6 +1,7 @@
 ---
 title: "Prueba Insert"
 weight: 1
+author: Sabela Sobrino 
 ---
 
 ### Java 
@@ -26,8 +27,11 @@ console.log("preuba");
 
 ### PHP   
 {{< coderunner php  >}}
+<html>
+<?php 
 $a = '1';
-
 echo $a;
+?>
+<html>
 {{< /coderunner  >}}
 

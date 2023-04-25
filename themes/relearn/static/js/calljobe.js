@@ -22,8 +22,8 @@ addCodeRunnerBlockIds()
 
 function _getSourceFileName(text, ext) {
     var sourceName = "calljobe";
-    
-    if (ext == "java") {    
+
+    if (ext == "java" ) {    
         var arrLines = text.split(/\r?\n|\r|\n/g);
         //Array con la línea del encabezado de la clase "public class ..."
         const arrLine = arrLines.filter(line  => line.includes("class") && ! line.includes("*"));
@@ -74,18 +74,18 @@ function calljobe(server, port, lan, numbloque) {
     
     Http.onreadystatechange = (e) => {
        // console.log(Http.responseText)
-        const responseString = Http.responseText.replaceAll('\n','\\n'); // Falla (pero no debería)
-        jres = JSON.parse(responseString);
-        stdout = jres['stdout'];
+        //const responseString = Http.responseText.replaceAll('\n','\\n'); // Falla (pero no debería)
+        jres = JSON.parse(Http.responseText);
+        console.log(jres);
+        stdout = jres['stdout']; 
         stderr = jres['stderr'];
         cmpinfo = jres['cmpinfo'];
 
         if(stderr) {
             document.getElementById(resid).value = stderr;  
-            console.log(stderr)             
         }
         else {
-            document.getElementById(resid).value = stdout;               
+            document.getElementById(resid).value = stdout;   
             //document.getElementById(resid).value = stdout + "\n" + stderr + "\n" + cmpinfo;               
         }
 

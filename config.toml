@@ -12,11 +12,12 @@ relativeurls = true
 # yeah, well, obviously a mandatory setting for your site, if you want to
 # use this theme ;-)
 theme = "relearn"
+enableGitInfo = true
 
 # the main language of this site; also an automatic pirrrate translation is
 # available in this showcase
-languageCode = "en"
-defaultContentLanguage = "en"
+languageCode = "es"
+defaultContentLanguage = "es"
 
 # the site's title of this showcase; you should change this ;-)
 title = "Manuais IES San Clemente"
@@ -34,6 +35,13 @@ title = "Manuais IES San Clemente"
   disableSeoHiddenPages = true
   disableShortcutsTitle = false
   mermaidInitialize = "{ \"securityLevel\": \"loose\" }"
+  dateFormat = 2006-02-02
+
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
 
 [outputs]
   # add JSON to the home to support lunr search; This is a mandatory setting

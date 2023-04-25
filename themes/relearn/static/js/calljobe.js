@@ -67,7 +67,7 @@ function calljobe(server, port, lan, numbloque) {
    // lan = document.getElementById('language').value;
     ext = extensions[lan];
     const Http = new XMLHttpRequest();
-    const url='http://' + server + ':' + port + '/jobe/index.php/restapi/runs';
+    const url='https://' + server + ':' + port + '/jobe/index.php/restapi/runs';
     Http.open("POST", url);
     Http.setRequestHeader("Content-type", "application/json");
     Http.send(JSON.stringify({"run_spec": {"language_id": lan, "sourcefilename": _getSourceFileName(runcodeText, ext) + "." + ext, "sourcecode": runcodeText}}));

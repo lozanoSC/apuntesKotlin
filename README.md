@@ -3,7 +3,6 @@
 ## Introducción y objetivos
 
 El objetivo de este proyecto es disponer de un repositorio de apuntes relacionados con los módulos de informática impartidos en el IES San Clemente.
-
 A través de los siguientes apartados se describirá la estructura, modo de colaboración y aspectos técnicos relativos a la creación colaborativa de apuntes.
 
 ## Funcionamiento de la plantilla
@@ -128,6 +127,7 @@ Los elementos básicos definidos en este archivo son
 title: Redes
 chapter: true
 weight: 1
+author: Sabela 
 ```
 
 Donde el elemento más significativo, **title**, es el que da nombre a la sección correspondiente, en este caso al estar el archivo _index.md ubicado el el directorio raíz del área temática de redes, establece que en el menú de navegación izquierdo de la página se creará un menú desplegable cuyo elemento principal mostrará el texto "Redes".
@@ -135,6 +135,7 @@ Donde el elemento más significativo, **title**, es el que da nombre a la secci�
 El elemento **chapter** se establece a true para indicar que se tratará de una sección que contendrá en su interior otras subsecciones y por tanto se creará un submenú desplegable en el panel de navegación izquierdo.
 
 **weight** está relacionado con la posición relativa de los elementos en el menú de navegación.
+El elemento **author** es opcional y se reflejará en la parte final de la página. 
 
 Todos los directorios que alberguen secciones de contenidos de un área temática, del subnivel que sean, contendŕan dentro un archivo _index.md.
 
@@ -192,6 +193,18 @@ En el archivo introduccion.md para hacer referencia a la imagen *ejemplo.png* ha
 ```
 ![ejemplo](images/ejemplo.png)
  ```
+
+#### Borrador
+
+En el caso de querer hacer los apuntes y manterlos ocultos se puede introducir el siguiente elemento en la cabecera: 
+
+```
+title: Redes
+chapter: true
+weight: 1
+author: Sabela 
+draft: true 
+```
 
 ## Editing this README
 

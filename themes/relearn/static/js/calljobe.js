@@ -76,16 +76,18 @@ function calljobe(server, port, lan, numbloque) {
        // console.log(Http.responseText)
         //const responseString = Http.responseText.replaceAll('\n','\\n'); // Falla (pero no debería)
         jres = JSON.parse(Http.responseText);
-        console.log(jres);
         stdout = jres['stdout']; 
         stderr = jres['stderr'];
         cmpinfo = jres['cmpinfo'];
-
+        
+        
+        
+      
         if(stderr) {
             document.getElementById(resid).value = stderr;  
         }
         else {
-            document.getElementById(resid).value = stdout;   
+            document.getElementById(resid).value = stdout.trim();   
             //document.getElementById(resid).value = stdout + "\n" + stderr + "\n" + cmpinfo;               
         }
 

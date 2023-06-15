@@ -1,7 +1,7 @@
 ---
 title: Modo de colaborar
 author: Sabela Sobrino
-weight: 1
+weight: 2
 ---
 
 Para colaborar será necesario realizar los pasos descritos a continuación

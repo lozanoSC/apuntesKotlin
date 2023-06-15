@@ -1,7 +1,8 @@
 ---
 title: Estructura de contenidos
 author: Sabela Sobrino
-weight: 2
+chapter: true
+weight: 3
 ---
 
 Una vez hecho el fork y descargado el repositorio apuntes, nos encontramos con la estructura de directorios siguiente:

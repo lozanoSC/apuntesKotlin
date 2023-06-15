@@ -1,124 +1,34 @@
 ---
-title: Ejemplos códigos
+title: Apuntes
 author: Sabela Sobrino
 ---
 
-## Insertar código que se pueda ejecutar  
+## Introducción y objetivos
 
-#### Código 
+El objetivo de este proyecto es disponer de un repositorio de apuntes relacionados con los módulos de informática impartidos en el IES San Clemente.
+A través de los siguientes apartados se describirá la estructura, modo de colaboración y aspectos técnicos relativos a la creación colaborativa de apuntes.
 
-````html
-{{</* coderunner java */>}}
-public class HolaMundo {
-	public static void main(String[] args) {		
-		System.out.println("Hola Mundo");
-	}
-}
-{{</* /coderunner  */>}}
+## Funcionamiento de la plantilla
 
-````
+La plantilla definida en el presente repositorio de gitlab cuenta con un sistema de renderizado automático de los archivos markdown creados en ella que genera la documentación en formato HTML bien estructurado, de fácil lectura, navegabilidad y con posibilidad de efectuar búsquedas. La tecnología relacionada está basada en las **gitlab pages** y es un recurso muy utilizado para generar documentación en "formato humano".
 
-#### Resultado 
+> La correspondiente documentación será accesible en la URL:
+> [https://manuais.pages.iessanclemente.net/apuntes/](https://manuais.pages.iessanclemente.net/apuntes/)
 
-{{< coderunner java >}}
-public class HolaMundo {
-	public static void main(String[] args) {		
-		System.out.println("Hola Mundo");
-	}
-}
-{{< /coderunner  >}}
+Para más información puede consultarse el siguiente enlace: [Gitlab pages](https://docs.gitlab.com/ee/user/project/pages/)
 
+## Estructura organizativa de los apuntes
 
-Se puede cambiar el lenguaje a ejecutar por: php, c, cpp, python3, nodejs, pascal y octave.
+Los apuntes se organizarán en las siguientes áreas temáticas:
 
-## Insertar Vídeo de Youtube 
+* Redes
+* Sistemas
+* Bases de datos
+* Programación
+* Hardware
+* Ciberseguridad
 
-#### Código 
+En cada área se aplicará un sencillo sistema de creación y edición de los contenidos basado en los siguientes roles de usuario:
 
-````html
-  {{</* youtube rKCVFPCxddc */>}}
-````
-
-#### Resultado 
-
-  {{< youtube rKCVFPCxddc >}}
-
-Las letras son el id del vídeo después de subirlo a Youtube. 
-
-## Insertar contenido de Apuntes 
- 
-#### Código 
-
-``` 
-{{%/* insert   "redes/2.direccionamientoip/4.direccionamientosinclase"  */%}}
-```
-
-Se obtiene de la url de la página directamente. 
-
-## Deplegable 
-#### Código 
-
-``` 
-{{%/* expand title="Expand me..." */%}}Thank you!{{%/* /expand */%}}
-```
-#### Resultado 
-
-{{% expand title="Expand me" %}}Thank you!{{% /expand %}}
-
-## Pestañas
-#### Código 
-
-
-````go
-{{</* tabs */>}}
-{{%/* tab name="python" */%}}
-```python
-print("Hello World!")
-```
-{{%/* /tab */%}}
-{{%/* tab name="R" */%}}
-```R
-> print("Hello World!")
-```
-{{%/* /tab */%}}
-{{%/* tab name="Bash" */%}}
-```Bash
-echo "Hello World!"
-```
-{{%/* /tab */%}}
-{{</* /tabs */>}}
-````
-
-#### Resultado 
-
-
-{{< tabs >}}
-{{% tab name="python" %}}
-```python
-print("Hello World!")
-```
-{{% /tab %}}
-{{% tab name="bash" %}}
-```bash
-echo "Hello World!"
-```
-{{% /tab %}}
-{{< /tabs >}}
-
-## Botones
-
-#### Código 
-
-```go
-{{%/* button href="https://gohugo.io/" */%}}Get Hugo{{%/* /button */%}}
-{{%/* button href="https://gohugo.io/" icon="fas fa-download" */%}}Get Hugo with icon{{%/* /button */%}}
-{{%/* button href="https://gohugo.io/" icon="fas fa-download" icon-position="right" */%}}Get Hugo with icon right{{%/* /button */%}}
-```
-
-#### Resultado 
-
-
-{{% button href="https://gohugo.io/" style="info" %}}Get Hugo{{% /button %}}
-{{% button href="https://gohugo.io/" style="note" %}}Get Hugo{{% /button %}}
-{{% button href="https://gohugo.io/" style="tip" %}}Get Hugo{{% /button %}}
-{{% button href="https://gohugo.io/" style="warning" %}}Get Hugo{{% /button %}}
+* **editor**: Profesorado interesado en colaborar creando, editando o revisando contenidos en una determinada área temática.
+* **supervisor**: Miembros del equipo de profesores encargados de revisar las aportaciones y aprobar los cambios. El papel de supervisor será realizado por un experto del área temática correspondiente.

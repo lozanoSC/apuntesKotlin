@@ -1,10 +1,10 @@
 ---
-title: programación orientada a objetos
+title: programación funcional
 chapter: true
 weight: 2000
 
 ---
-Estudiamos los fundamentos de la programación funcional.
+Breve introducción a la programación funcional. 
 
 
 

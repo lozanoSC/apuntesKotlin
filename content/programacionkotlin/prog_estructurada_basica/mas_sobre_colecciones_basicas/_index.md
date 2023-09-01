@@ -1,5 +1,5 @@
 ---
-title: colecciones básicas
+title: más sobre colecciones básicas
 chapter: true
 weight: 300
 

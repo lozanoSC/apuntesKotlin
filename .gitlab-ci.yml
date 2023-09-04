@@ -17,19 +17,3 @@ pages:
     - public
   only:
   - master
-
-pdf:
-  stage: deploy
-  image: manurlopez17/apuntes-to-pdf:latest
-  script:
-    - ls
-    - cd /pdf
-    - ls
-    - python3 mdToPDF.py ${CI_PROJECT_DIR}
-    - mkdir /public
-    - mv output/proba.pdf /${CI_PROJECT_DIR}/apuntamentos.pdf
-  artifacts:
-    paths:
-      - apuntamentos.pdf
-  when: manual
-

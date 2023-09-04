@@ -1,5 +1,5 @@
 ---
-title: programación funcional
+title: Programación funcional
 chapter: true
 weight: 2000
 

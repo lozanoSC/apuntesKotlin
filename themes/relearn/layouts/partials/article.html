@@ -4,8 +4,9 @@
 
 {{ if and (not .IsHome ) (not .Params.chapter) }}<h1>{{ .Title }}</h1>
 {{ end }}{{ $content | safeHTML }}
-            <footer class="footline">
-              {{- partial "content-footer.html" . }}
-            </footer>
+        
           </article>
+          <footer class="footline">
+            {{- partial "content-footer.html" . }}
+          </footer>
 {{- end }}

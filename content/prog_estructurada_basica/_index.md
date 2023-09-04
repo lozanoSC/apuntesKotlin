@@ -1,5 +1,5 @@
 ---
-title: programación estructurada básica
+title: Programación estructurada básica
 chapter: true
 weight: 2
 

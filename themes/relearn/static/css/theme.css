@@ -404,7 +404,6 @@ th {
 #body-inner {
     display: flex;
     flex: 1; /* fill rest of vertical space */
-    flex-direction: column;
     padding: 0 3rem 4rem 3rem;
     position: relative; /* PS */
 }
@@ -430,6 +429,7 @@ th {
         margin-left: auto;
         margin-right: auto;
         max-width: 1000px;
+        width: 100%;
     }
 }
 
@@ -1620,3 +1620,4 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 #sidebar .collapsible-menu input.toggle:checked + label + a + ul {
 	display: inline;
 }
+

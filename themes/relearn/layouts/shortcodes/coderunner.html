@@ -1,0 +1,17 @@
+{{ $lenguaje := .Get 0 }}
+{{ $urlServer :=  print "jobe.iessanclemente.net" }}
+{{ $port := print 443 }}
+
+<div contentEditable="true" class="coderunner-block">
+
+    <div>
+        <a class="btn btn-default" onclick="callJOBE(this, '{{ $urlServer }}', '{{ $port }}', '{{ .Get 0 }}')">
+     
+            <i class="fa fa-play"></i>
+        </a>
+        {{ transform.Highlight .Inner $lenguaje }}
+    </div>
+    <b>Salida:</b> 
+    <textarea type="text" readonly></textarea>
+</div>
+

@@ -1,5 +1,5 @@
 ---
-title: programación orientada a objetos
+title: Programación orientada a objetos
 chapter: true
 weight: 1000
 

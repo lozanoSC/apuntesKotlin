@@ -1,0 +1,12 @@
+{{ $repo := .Get 0 }}
+{{ $u := urlquery  $repo  | safeURL }}
+
+{{ $urlGitLabApi :=  "https://gitlab.iessanclemente.net/api/v4/projects/3017/repository/files/content%2F" }}
+{{ $urlGitLab :=  "https://manuais.pages.iessanclemente.net/apuntes/" }}
+
+{{ $json := getJSON  $urlGitLabApi .  $u  ".md?ref=main" (dict "PRIVATE-TOKEN" "glpat-1-zkuxUVBXSC9ziSi6NS") }}
+{{ $urlFoto :=  print "![foto]("  $urlGitLab  $u "/"   }}
+
+{{ $jsonDecode := $json.content | base64Decode }}
+
+{{ $jsonDecode | replaceRE `(?m)(?s:---.*.---$)` " " | replaceRE "!\\[.*.\\]\\("  $urlFoto | markdownify  }}

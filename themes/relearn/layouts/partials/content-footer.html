@@ -3,4 +3,36 @@
   {{- with $.Date }}
             <i class='fas fa-calendar'></i> {{ . | time.Format ":date_medium" }}
   {{- end }}
-{{- end }}
+  
+  {{- end }}
+  
+<div class="article-footer">
+  <hr>
+  <div class="article-footer-autor">
+    <div>
+      {{ $lastmod := .Lastmod.Format "02.01.2006" }}
+    <i class='fas fa-calendar'></i> Última actualización: {{ .Lastmod.Format "02.01.2006" }} </span>
+    <!-- Para obtenerlo de git -->
+    <!-- <span itemprop="name">{{ .GitInfo.AuthorName }}</span> --> 
+    </div>
+    <div>
+      {{- if isset .Params "author" }}
+      <i class='fas fa-user'></i>  <span itemprop="name"> Autor/a: {{  $.Params.author }}</span> 
+      {{- end }}
+    </div>
+
+    <div class="creative-commons-license">
+      <img src="https://creativecommons.org/images/deed/cc_icon_white_x2.png" alt="" />
+      <img src="https://creativecommons.org/images/deed/attribution_icon_white_x2.png" alt="" />
+      <img src="https://creativecommons.org/images/deed/nc_white_x2.png" alt="" />
+      <img src="https://creativecommons.org/images/deed/sa_white_x2.png" alt="" />
+    </div>
+
+  </div>
+  <hr>
+  
+  <div>
+
+
+</div>
+

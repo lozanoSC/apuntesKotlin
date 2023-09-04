@@ -1,0 +1,55 @@
+article {
+    width: 100%;
+    min-height: 100%;
+}
+.article-footer {
+    padding-bottom: 20px;
+}
+.article-footer-autor {
+    display: flex;
+    justify-content: center;
+}
+.article-footer-autor > div {
+    padding: 0 10px;
+}
+.creative-commons-license {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+.creative-commons-license img {
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 4px !important;
+}
+.coderunner-block {
+    width: 100%;
+}
+.coderunner-block pre {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.coderunner-block > div {
+    position: relative;
+}
+.coderunner-block a {
+    width: 30px;
+    height: 28px;
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    z-index: 10000;
+    background-color: rgba( 160, 160, 160, 0.2 );
+    border: none !important;
+    border-radius: 3px !important;
+}
+.coderunner-block a i {
+    top: 6px;
+    left: 10px;
+    position: absolute;
+    color: #27ae60;
+}
+.coderunner-block textarea {
+    height: 40px;
+}
